@@ -9,23 +9,43 @@ import deleteimg from "../../assets/delete.svg";
 import send from "../../assets/send-2.svg";
 import { useState } from "react";
 import people2 from "../../assets/Ellipse 15.svg";
+import { useEffect } from "react";
 export function Dashboard() {
   const [messages, setMessages] = useState([
     { id: 1, content: "Hello!", sender: "user" },
     { id: 2, content: "Hi there!", sender: "other" },
     // Add more messages as needed
   ]);
+  const [show, setShow] = useState(false);
 
+  const toggle = (forceShow) => {
+    setShow(forceShow !== undefined ? forceShow : !show);
+  };
   const handleSendMessage = (messageText) => {
     const newMessage = { id: messages.length + 1, content: messageText, sender: "user" };
     setMessages([...messages, newMessage]);
   };
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener on component mount
+    window.addEventListener("resize", handleResize);
+
+    // Detach the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <div className="content">
         <Header />
         <div className="content-body">
-          <div className="container-people">
+        <div className={`container-people ${windowWidth <= 1024 ? (show ? "hide-container" : "full-width") : ""}`}>
             <div className="card1">
               <h2 className="heading">ALL YOUR CHATS</h2>
               <button className="chat-img">
@@ -38,7 +58,7 @@ export function Dashboard() {
                 When a bot sends you images, you will be charged one secondary
                 image
               </span>
-              <div className="people">
+              <div className="people" onClick={toggle}>
                 <div className="people-img">
                   <img src={people1} alt="" />
                 </div>
@@ -65,7 +85,7 @@ export function Dashboard() {
               <button className="create-New">Create New Button</button>
             </div>
           </div>
-          <div className="container-chats">
+          <div className={`container-chats ${windowWidth <= 1024 ? (show ? "full-width" : "hide-container") : ""}`}>
             <div className="card-wrapper">
               <div className="card-header">
               <div className="selected">
@@ -76,7 +96,7 @@ export function Dashboard() {
                   <div className="name">Cressa Jessalin</div>
               </div>
               <div className="addicon">
-              <div className="back">
+              <div className="back"onClick={() => toggle(false)}>
                 <img src={back} alt="" />
                 <span>Back</span>
               </div>

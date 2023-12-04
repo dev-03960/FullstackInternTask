@@ -1,11 +1,15 @@
+@import "../../pages/css-config/mixins.scss";
 .content-footer{
     padding-top: 5rem;
+    
 }
 .content-footer .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    @include md{
+        flex-direction: column;
+    }
 }
 .additional {
 display: flex;
@@ -16,4 +20,7 @@ gap: 1rem;
     color: #ffff;
     font-family: 'Poppins' sans-serif;
     font-size: 1.5rem;
+    @include sm{
+        font-size: 1.2rem;
+    }
 }

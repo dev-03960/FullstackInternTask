@@ -1,3 +1,4 @@
+@import "../../pages/css-config/mixins.scss";
 .content-header {
     display: flex;
     border-radius: 2rem;
@@ -25,7 +26,11 @@
   .card-list{
       display: flex;
       color: #F3AE9F;
+      @include lg{
+        display: none;
+      }
   }
+  
   .card-list ul{
       list-style: none;
       display: flex;
@@ -40,12 +45,15 @@
       align-items: center;
   }
   .explore span{
-      color: #F3AE9F;
+      color: #ffff;
       font-family: 'Open Sans', sans-serif;
   font-size: 21.509px;
   font-style: normal;
   font-weight: 600;
   line-height: 70%; /* 15.057px */
+  }
+  .explore span:hover{
+    color: #F3AE9F;
   }
   .create{
       display: flex;
@@ -55,12 +63,15 @@
       align-items: center;
   }
   .create span{
-      color: #F3AE9F;
+      color: #fff;
       font-family: 'Open Sans', sans-serif;
   font-size: 21.509px;
   font-style: normal;
   font-weight: 600;
   line-height: 70%; /* 15.057px */
+  }
+  .create span:hover{
+    color: #F3AE9F;
   }
   .Edit{
       display: flex;
@@ -70,12 +81,15 @@
       align-items: center;
   }
   .Edit span{
-      color: #F3AE9F;
+      color: #ffff;
       font-family: 'Open Sans', sans-serif;
   font-size: 21.509px;
   font-style: normal;
   font-weight: 600;
   line-height: 70%; /* 15.057px */
+  }
+  .Edit span:hover{
+    color: #F3AE9F;
   }
   .login-button{
       display: flex;
@@ -94,4 +108,10 @@
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 21.6px */
+  }
+  .hamburger-button{
+    background: #050505;
+    color: #F3AE9F;
+    border: none;
+    font-size: 3rem;
   }

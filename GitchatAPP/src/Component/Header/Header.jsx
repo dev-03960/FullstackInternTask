@@ -2,8 +2,23 @@ import "./Header.scss";
 import Group_1 from "../../assets/Group 1.svg";
 import Group_2 from "../../assets/Group 2.svg";
 import pen from "../../assets/pen 1 (traced).svg";
-
+import { useEffect } from "react";
+import { useState } from "react";
 export function Header(){
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    useEffect(() => {
+        const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+    
+        // Attach the event listener on component mount
+        window.addEventListener("resize", handleResize);
+    
+        // Detach the event listener on component unmount
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }, []);
     return(<>
     <div className="content-header">
           <div className="container">
@@ -31,7 +46,7 @@ export function Header(){
                 </ul>
             </div>
           </div>
-          <button className="login-button"><span className="login">login</span></button>
+          {windowWidth>1024?(<button className="login-button"><span className="login">login</span></button>):<button className="hamburger-button"> ☰</button>}
         </div>
     </>)
 }
