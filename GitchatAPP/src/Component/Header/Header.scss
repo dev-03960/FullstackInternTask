@@ -1,0 +1,97 @@
+.content-header {
+    display: flex;
+    border-radius: 2rem;
+    justify-content: space-between;
+  padding-bottom: 5rem;
+  }
+  .content-header .container{
+      display: flex;
+      color: #F3AE9F;
+  }
+  .card-logo {
+      color: #F3AE9F;
+      font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 53.2px */
+  }
+  .line{
+      border: 0.5px solid rgb(252, 251, 251);
+      width: 1px;
+  height: 36px;
+    margin: 0rem 2rem;
+  }
+  .card-list{
+      display: flex;
+      color: #F3AE9F;
+  }
+  .card-list ul{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+  }
+  .explore{
+      display: flex;
+      background: #050505;
+      border: none;
+      gap: 0.8rem;
+      align-items: center;
+  }
+  .explore span{
+      color: #F3AE9F;
+      font-family: 'Open Sans', sans-serif;
+  font-size: 21.509px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 70%; /* 15.057px */
+  }
+  .create{
+      display: flex;
+      background: #050505;
+      border: none;
+      gap: 0.8rem;
+      align-items: center;
+  }
+  .create span{
+      color: #F3AE9F;
+      font-family: 'Open Sans', sans-serif;
+  font-size: 21.509px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 70%; /* 15.057px */
+  }
+  .Edit{
+      display: flex;
+      background: #050505;
+      border: none;
+      gap: 0.8rem;
+      align-items: center;
+  }
+  .Edit span{
+      color: #F3AE9F;
+      font-family: 'Open Sans', sans-serif;
+  font-size: 21.509px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 70%; /* 15.057px */
+  }
+  .login-button{
+      display: flex;
+      padding: 0rem 5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 200px;
+  background: #F3AE9F;
+  }
+  .login{
+      color: #050505;
+      font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 21.6px */
+  }

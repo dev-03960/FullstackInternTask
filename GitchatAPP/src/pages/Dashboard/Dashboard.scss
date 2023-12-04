@@ -1,128 +1,179 @@
 @import "../css-config/mixins.scss";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
 .content {
-  height: 100vh;
   background: #050505;
   padding: 2.7rem 9.4rem;
 }
-//header css
-.content-header {
-  display: flex;
-
-  border-radius: 2rem;
-  justify-content: space-between;
-padding-bottom: 5rem;
-}
-.content-header .container{
+.content-body{
     display: flex;
-    color: #F3AE9F;
+    gap: 1rem;
+    height: 80vh;
 }
-.card-logo {
-    color: #F3AE9F;
-    font-family: 'Poppins', sans-serif;
-font-size: 38px;
+.container-people{
+    border-radius: 10px;
+    border: 1px solid rgba(141, 153, 218, 0.00);
+    background: #181818;
+    width: 40%;
+    height: 100%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #7F8781;
+    font-family: 'Poppins';
+}
+.card1 .heading{
 font-style: normal;
-font-weight: 700;
-line-height: 140%; /* 53.2px */
+font-weight: 400;
 }
-.line{
-    border: 0.5px solid rgb(252, 251, 251);
-    width: 1px;
-height: 36px;
-  margin: 0rem 2rem;
-}
-.card-list{
-    display: flex;
-    color: #F3AE9F;
-}
-.card-list ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-.explore{
-    display: flex;
-    background: #050505;
-    border: none;
-    gap: 0.8rem;
-    align-items: center;
-}
-.explore span{
-    color: #F3AE9F;
-    font-family: 'Open Sans', sans-serif;
-font-size: 21.509px;
-font-style: normal;
-font-weight: 600;
-line-height: 70%; /* 15.057px */
-}
-.create{
-    display: flex;
-    background: #050505;
-    border: none;
-    gap: 0.8rem;
-    align-items: center;
-}
-.create span{
-    color: #F3AE9F;
-    font-family: 'Open Sans', sans-serif;
-font-size: 21.509px;
-font-style: normal;
-font-weight: 600;
-line-height: 70%; /* 15.057px */
-}
-.Edit{
-    display: flex;
-    background: #050505;
-    border: none;
-    gap: 0.8rem;
-    align-items: center;
-}
-.Edit span{
-    color: #F3AE9F;
-    font-family: 'Open Sans', sans-serif;
-font-size: 21.509px;
-font-style: normal;
-font-weight: 600;
-line-height: 70%; /* 15.057px */
-}
-.login-button{
-    display: flex;
-width: 182px;
-height: 47px;
-padding: 15px 40px 20px 40px;
+.chat-img{
+display: flex;
+padding: 10px;
 justify-content: center;
 align-items: center;
 gap: 10px;
 flex-shrink: 0;
-border-radius: 200px;
+border-radius: 10px;
 background: #F3AE9F;
 }
-.login{
-    color: #050505;
-    font-family: 'Open Sans', sans-serif;
-font-size: 18px;
+.card1 .desc {
+   color:  #ffffffd0;
+    font-size: 18px;
 font-style: normal;
-font-weight: 600;
-line-height: 120%; /* 21.6px */
+font-weight: 400;
+line-height: 140%; 
 }
-//footer css
-.content-footer{
-    padding-top: 5rem;
-}
-.content-footer .container{
+.people{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+gap: 1rem;
+align-items: center;
+}
+.people:hover{
+    cursor: pointer;
+    background-color: #7f878133;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 0.5rem;
+}
+.card2{
+    display: flex;
+    gap: 1rem;
+}
+.create-New{
+    background-color: #181818;
+    color: #ffffffd0;
+    font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%;
+border: none;
+}
+.people-line{
+    border: 0.5px solid  #ffffff90;
+}
+.container-chats{
+    border-radius: 10px;
+    border: 1px solid rgba(141, 153, 218, 0.00);
+    background: #181818;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+color: #ffffffed;
+}
+.card-header{
+    background-color: #2F2F2F;
+    display: flex;
+border-radius: 10px;
+padding: 0.5rem 1rem;
+justify-content: space-between;
 
 }
-.additional {
-display: flex;
-align-items: center;
-gap: 1rem;
+.addicon
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
-.contact{
-    color: #ffff;
-    font-family: 'Poppins' sans-serif;
-    font-size: 1.5rem;
+.back{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+.Delete{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+.selected{
+    display: flex;
+gap: 1rem;
+align-items: center;
+}
+.card-wrapper{
+    height: 100%;
+}
+.card-body{
+    height: 75%;
+}
+.card-footer{
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+}
+.input-text{
+    display: flex;
+width: 90%;
+padding: 12px 16px 12px 20px;
+align-items: center;
+gap: 10px;
+border-radius: 70px;
+background: #2F2F2F;
+color: #ffffffdd;
+}
+.message-img{
+    display: inline-flex;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 29px;
+background: #F3AE9F;
+}
+.message{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.other{
+    flex-direction: row-reverse;
+}
+.user-input{
+    display: flex;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 12px 12px 12px 0px;
+
+background:  #2F2F2F;
+}
+.other-input{
+    display: flex;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 12px 12px 0px 12px;
+background: #F3AE9F;
+color:#050505;
 }

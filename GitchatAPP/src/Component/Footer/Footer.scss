@@ -1,0 +1,19 @@
+.content-footer{
+    padding-top: 5rem;
+}
+.content-footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.additional {
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+.contact{
+    color: #ffff;
+    font-family: 'Poppins' sans-serif;
+    font-size: 1.5rem;
+}
